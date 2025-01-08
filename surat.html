@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surat Keterangan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="letter">
+        <div class="kop-surat">
+            <img src="assets/images/logokabmadiun.png" alt="Logo Kabupaten Madiun" class="logo">
+            <div class="kop-info">
+                <h2><strong>PEMERINTAH KABUPATEN MADIUN</strong></h2>
+                <h2><strong>DINAS PENDIDIKAN DAN KEBUDAYAAN</strong></h2>
+                <h2><strong>SEKOLAH DASAR NEGERI PUTAT 02 NO.200.22</strong></h2>
+                <p>Desa Putat, Jl. Raya Putat, Kec. Geger KodePos 63171 Telp. (0351)-3630569</p>
+                <p>Email: sdn.putat02@gmail.com</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="content">
+            <h2 style="text-align: center;"><u>SURAT KETERANGAN</u></h2>
+            <!-- Menambah nomor surat di bawah judul -->
+        <div style="text-align: center; font-weight: bold; font-size: 18px;">
+            <label for="nomor_surat">Nomor:</label>
+            <input type="text" id="nomor_surat" value="422/masukan nomor keluar/402.107.200.22/2025" style="font-weight: bold; font-size: 18px;" />
+        </div>
+
+        <div class="content">
+            <p>Yang bertanda tangan di bawah ini:</p>
+            <table>
+                <tr>
+                    <td>Nama</td>
+                    <td>:</td>
+                    <td>Wahyu Endhy, S.Pd.M.Pd</td>
+                </tr>
+                <tr>
+                    <td>NIP</td>
+                    <td>:</td>
+                    <td>198404242009021008</td>
+                </tr>
+                <tr>
+                    <td>Pangkat/Golongan</td>
+                    <td>:</td>
+                    <td>III/d Pembina TK. I</td>
+                </tr>
+                <tr>
+                    <td>Jabatan</td>
+                    <td>:</td>
+                    <td>Kepala Sekolah</td>
+                </tr>
+                <tr>
+                    <td>Unit Kerja</td>
+                    <td>:</td>
+                    <td>SD Negeri Putat 02</td>
+                </tr>
+            </table>
+
+            <p>Menerangkan bahwa siswa tersebut :</p>
+            <table>
+                <tr>
+                    <td>Nama</td>
+                    <td>:</td>
+                    <td id="siswa-nama"></td>
+                </tr>
+                <tr>
+                    <td>Kelas</td>
+                    <td>:</td>
+                    <td id="siswa-kelas"></td>
+                </tr>
+                <tr>
+                    <td>Asal Sekolah</td>
+                    <td>:</td>
+                    <td id="siswa-asal-sekolah"></td>
+                </tr>
+                <tr>
+                    <td>Alamat Sekolah</td>
+                    <td>:</td>
+                    <td id="siswa-alamat-sekolah"></td>
+                </tr>
+            </table>
+
+            <p>Telah bersedia menerima siswa baru di SD Negeri Putat 02 Kec. Geger Kab. Madiun.</p>
+            <p>Demikian surat keterangan ini dibuat untuk digunakan sebagaimana mestinya.</p>
+        </div>
+         <!-- Bagian Tanda Tangan -->
+         <div class="signature">
+            <p>Madiun, <span id="currentDate">......................</span></p>
+            <p>Kepala Sekolah SD Negeri Putat 02</p>
+            <img src="assets/images/TTdWahyu.gif" alt="Tanda Tangan" class="signature-img">
+            <p><strong>Wahyu Endhy, S.Pd.M.Pd</strong></p>
+            <p>NIP. 198404242009021008</p>
+        </div>
+
+        <!-- Stempel Elektronik -->
+        <div class="stempel">
+            <h2>APPROVED</h2>
+        </div>
+
+        <!-- Tempat untuk menampilkan tanggal cetak -->
+        <div class="tanggal-cetak" id="tanggal-cetak"></div>
+    </div>
+    <div id="menu" class="menu">
+        <button id="printBtn">Cetak Surat</button>
+        <a href="index.html"><button>Kembali ke Formulir</button></a>
+    </div>
+</div>
+
+    <script>
+        // Menampilkan data yang disimpan di localStorage
+        document.getElementById('siswa-nama').innerText = localStorage.getItem('nama');
+        document.getElementById('siswa-kelas').innerText = localStorage.getItem('kelas');
+        document.getElementById('siswa-asal-sekolah').innerText = localStorage.getItem('asalSekolah');
+        document.getElementById('siswa-alamat-sekolah').innerText = localStorage.getItem('alamatSekolah');
+    </script>
+</body>
+</html>
+
+<script src="surat.js"></script>

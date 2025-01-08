@@ -1,0 +1,237 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+h1, h2 {
+    text-align: center;
+    color: #444;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.letter {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+#display-date {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+.logo {
+    width: 20px; /* Ukuran logo */
+    height: auto;
+    width: 100px; /* Ukuran logo */
+    margin-left: 10px; /* Geser logo ke kanan */
+    margin-right: 0px; /* Geser logo ke kiri */
+}
+
+
+.kop-info {
+    text-align: center; /* Menyelaraskan teks */
+}
+
+.kop-info h3 {
+    margin: 2px 0; /* Jarak antar baris teks */
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.kop-info h2 {
+    margin: 5px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.kop-info p {
+    margin: 2px 0;
+    font-size: 14px;
+}
+
+hr {
+    border: 1px solid black; /* Garis pembatas di bawah kop surat */
+    margin: 20px 0;
+}
+
+
+.kop-surat {
+    display: flex;
+    align-items: center; /* Menyelaraskan logo dan teks secara vertikal */
+    justify-content: center; /* Menempatkan elemen di tengah */
+    gap: 10px; /* Jarak antara logo dan teks */
+    margin-bottom: 0px;
+    margin-right: 80px; /* Geser logo ke kiri */
+}
+
+
+.kop-info {
+    text-align: center; /* Teks rata tengah */
+    line-height: 1; /* Spasi antar baris tunggal */
+    margin: 0; /* Hilangkan margin default */
+    padding: 0; /* Hilangkan padding default */
+}
+
+.kop-info h1, .kop-info h2, .kop-info p {
+    margin: 2px 0; /* Jarak antar elemen teks minimal */
+}
+
+
+
+
+/*TANDA TANGAN */
+
+.signature {
+    white-space: nowrap; /* Mencegah teks untuk berpindah baris */
+    text-align: center;  /* Mengatur teks ke kiri */
+    padding: 50px;
+    margin-left: 300px; /* Memberikan margin kiri untuk penempatan lebih ke tengah */
+    margin-bottom: 40px;  /* Memberikan jarak atas untuk memisahkan tanda tangan dari isi surat */
+    margin-top: 0px;
+    width: 70%;
+    word-wrap: break-word; /* Membungkus kata yang terlalu panjang */
+ 
+  
+  
+  
+   
+   
+}
+
+
+.signature .signature-title {
+    margin-top: -10px;
+    font-weight: bold;
+}
+
+  
+
+
+
+
+@media print {
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    #letter {
+        width: 100%;
+        padding: 10px;
+        background: white;
+        border: 1px solid #ddd;
+    }
+
+    #print {
+        display: none;  /* Sembunyikan tombol print saat mencetak */
+    }
+}
+
+
+
+/*tanda tangan */
+
+
+
+
+.menu-container.nomorSurat {
+    display: none;  /* Menyembunyikan kolom menu */
+}
+
+
+
+
+.stempel {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    background-color: #473f3f00;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0); /* Efek bayangan */
+}
+
+.stempel h2 {
+    margin: 0;
+}
+
+ /* Default: Stempel hanya muncul di layar */
+ .stempel {
+    display: none; /* Sembunyikan di layar */
+}
+
+/* Ketika halaman dicetak */
+@media print {
+    .stempel {
+        display: inline-block; /* Tampilkan saat di print */
+        padding: 20px;
+        background-color: #28a745;
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0); /* Efek bayangan */
+    }
+}
+
+
+@media print {
+    #biodataForm, #menu {
+        display: none; /* Menyembunyikan form biodata dan menu tombol saat mencetak */
+    }
+}
+
+

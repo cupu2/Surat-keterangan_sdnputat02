@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Surat Keterangan</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Container untuk latar belakang -->
+    <div class="background">
+        <!-- Form untuk menambah/edit biodata siswa -->
+        <div class="form-container">
+            <h1>Formulir Surat Keterangan</h1>
+             
+            <form id="biodataForm">
+                <div class="form-group">
+                    <label for="nama">Nama</label>
+                    <input type="text" name="nama" id="nama" placeholder="Nama Siswa" required>
+                </div>
+                <div class="form-group">
+                    <label for="kelas">Kelas</label>
+                    <input type="text" name="kelas" id="kelas" placeholder="Kelas Siswa" required>
+                </div>
+                <div class="form-group">
+                    <label for="asal_sekolah">Asal Sekolah</label>
+                    <input type="text" name="asal_sekolah" id="asal_sekolah" placeholder="Asal Sekolah" required>
+                </div>
+                <div class="form-group">
+                    <label for="alamat_sekolah">Alamat Sekolah</label>
+                    <input type="text" name="alamat_sekolah" id="alamat_sekolah" placeholder="Alamat Sekolah" required>
+                </div>
+                <button type="submit" id="saveButton" class="btn">Simpan Biodata</button>
+                <button type="button" id="generate-surat" class="btn">Buat Surat</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
